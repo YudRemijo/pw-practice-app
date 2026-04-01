@@ -22,5 +22,5 @@ test('parametrized methods', async({page}) => {
 
     await pm.navigateTo().formLayoutsPage()
     await pm.onFormLayoutsPage().submitUsingTheGridFormWithCredentialsAndSelectOption(randomEmail, 'Welcome1',"option 2")
-
+    await page.screenshot({path: 'screenshots/formsLayout.png'})
 })

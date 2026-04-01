@@ -13,7 +13,7 @@ import { defineConfig, devices } from '@playwright/test';
  */
 export default defineConfig({
   
-  globalTimeout: 60000,
+  // globalTimeout: 60000,
   testDir: './tests',
   /* Run tests in files in parallel */
   fullyParallel: true,
@@ -79,4 +79,10 @@ export default defineConfig({
   //   url: 'http://localhost:3000',
   //   reuseExistingServer: !process.env.CI,
   // },
+
+  webServer: {
+    command: 'npm run start',
+    url: 'http://localhost:4200/'
+  }
+
 });
